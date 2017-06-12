@@ -59,9 +59,9 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int menuItemSelected = item.getItemId();
         if (menuItemSelected == R.id.action_search) {
-            Context context = MainActivity.this;
-            String message = "Refresh clicked!";
-            Toast.makeText(context, message, Toast.LENGTH_LONG).show();
+            mWeatherTextView.setText("");
+            loadWeatherData();
+            return true;
         }
         return super.onOptionsItemSelected(item);
     }
